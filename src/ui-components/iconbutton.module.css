@@ -1,0 +1,24 @@
+.container {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.alert {
+    background: #bb4d00;
+}
+.default {
+    background-color: #ffffff;
+}
+.primary {
+    background-color: #ffffff;
+}
+
+.container:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}

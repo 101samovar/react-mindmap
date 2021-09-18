@@ -1,0 +1,36 @@
+.container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+.input {
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid 1px #1b5e20;
+}
+
+.textarea {
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid 1px #1b5e20;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+label {
+    font-size: 10px;
+    opacity: 0.5;
+}

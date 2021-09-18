@@ -1,0 +1,27 @@
+.container {
+    padding: 0 10px;
+}
+
+.table {
+    width: 100%;
+    font-size: 12px;
+}
+
+th {
+    font-weight: 100;
+    border-bottom: solid 1px rgba(27, 94, 32, .1);
+    text-align: left;
+}
+
+.odd {
+    background-color: rgba(27, 94, 32, .1);
+}
+
+.even {
+    background-color: #fff;
+}
+
+.selected {
+    background-color: #1b5e20;
+    color: white;
+}

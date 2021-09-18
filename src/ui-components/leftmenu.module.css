@@ -1,0 +1,9 @@
+.container {
+    position: absolute;
+    left: 0;
+    width: 42px;
+    top: 42px;
+    bottom: 0;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

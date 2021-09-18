@@ -1,0 +1,40 @@
+.container {
+    fill: white;
+    fill-opacity: 0.9;
+    stroke: #1b5e20;
+    paint-order: stroke;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 10px;
+    alignment-baseline: middle;
+}
+
+.left {
+    text-anchor: end;
+}
+
+.middle {
+    text-anchor: middle;
+}
+
+.right {
+    text-anchor: start;
+}
+
+.selected {
+    stroke-width: 2px;
+    animation: pulse infinite 1s linear;
+}
+
+@keyframes pulse {
+    0% {
+        stroke-width: 2px;
+        stroke-opacity: 1;
+    }
+    100% {
+        stroke-width: 50px;
+        stroke-opacity: 0;
+    }
+}
