@@ -4,8 +4,8 @@ import Connection from "./Connection";
 import Toolbar from "./Toolbar";
 
 function Chart(props) {
-    const WIDTH = 400 / props.zoom;
-    const HEIGHT = 200 / props.zoom;
+    const WIDTH = props.width / props.zoom;
+    const HEIGHT = props.height / props.zoom;
     const R = 90;
 
     const getChildren = (list, parent, elements, dPhi) => {

@@ -8,8 +8,11 @@ import TableView from "./TableView";
 import Chart from "./Chart";
 
 class Map extends React.Component {
+    DEFAULT_WIDTH = 400;
+    DEFAULT_HEIGHT = 200;
     constructor(props) {
         super(props);
+        this.wrapper = React.createRef();
         const rootId = Number(router.getParams());
         const list = repository.getList({ rootId });
         const item = list[0];
@@ -23,8 +26,25 @@ class Map extends React.Component {
             zoom: 1,
             moveMode: false,
             x: 0,
-            y: 0
+            y: 0,
+            width: this.DEFAULT_WIDTH,
+            height: this.DEFAULT_HEIGHT
         }
+    }
+
+    onResize = () => {
+        const width = this.wrapper.current.clientWidth;
+        const height = this.wrapper.current.clientHeight;
+        this.setState({width, height});
+    };
+
+    componentDidMount() {
+        this.onResize();
+        window.addEventListener('resize', this.onResize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.onResize);
     }
 
     toggleMoveMode = () => {
@@ -167,6 +187,8 @@ class Map extends React.Component {
                 onToggleMoveMode={this.toggleMoveMode}
                 x={this.state.x}
                 y={this.state.y}
+                width={this.state.width}
+                height={this.state.height}
                 onMouseDown={this.onMouseDown}
                 onMouseMove={this.onMouseMove}
                 onMouseUp={this.onMouseUp}
@@ -176,7 +198,7 @@ class Map extends React.Component {
         return (
             <>
                 <h1>Map</h1>
-                <div className={css.container}>
+                <div className={css.container} ref={this.wrapper}>
                     {view}
                     <Toolbar
                         type="alert"
