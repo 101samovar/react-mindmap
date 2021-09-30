@@ -1,9 +1,16 @@
 .container {
     position: absolute;
-    left: 0;
+    left: -42px;
     width: 42px;
     top: 42px;
     bottom: 0;
     box-sizing: border-box;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 100;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-color: white;
+}
+
+.expanded {
+    left: 0;
 }

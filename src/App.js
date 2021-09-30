@@ -14,7 +14,8 @@ class App extends React.Component {
     const route = router.getRoute();
     this.state = {
       component: route.component,
-      breadcrumbs: route.breadcrumbs
+      breadcrumbs: route.breadcrumbs,
+      isLeftMenuExpanded: false 
     };
     router.subscribe(this.onRouteChange);
   }
@@ -31,10 +32,17 @@ class App extends React.Component {
       });
     }
   };
+  toggleMenu = () => {
+    const isMenuVisible = !this.state.isMenuVisible;
+    this.setState({isMenuVisible});
+  };
+  hideMenu = () => {
+    this.setState({isMenuVisible: false});
+  };
   render() {
     return (<div>
-      <Header />
-      <LeftMenu />
+      <Header onMenuClick={this.toggleMenu} />
+      <LeftMenu isExpanded={this.state.isMenuVisible} onMouseLeave={this.hideMenu} />
       <Breadcrumbs list={this.state.breadcrumbs} />
       <Content component={this.state.component} />
     </div>);
