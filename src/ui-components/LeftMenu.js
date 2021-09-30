@@ -9,8 +9,8 @@ function LeftMenu(props) {
     ];
 
     let className = css.container;
-    if (props.isExpanded) {
-        className += ' ' + css.expanded;
+    if (props.isMenuVisible) {
+        className += ' ' + css.visible;
     }
 
     return (<div className={className} onMouseLeave={props.onMouseLeave}>

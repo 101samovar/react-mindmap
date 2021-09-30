@@ -2,8 +2,12 @@ function Help() {
     return (
         <>
             <h1>Help</h1>
-            <p>More video</p>
-            <a href="https://www.youtube.com/channel/UCtYe0w6nGQxAlA_CHkjKxZg">https://www.youtube.com/channel/UCtYe0w6nGQxAlA_CHkjKxZg</a>
+            <p>
+                <a href="https://github.com/101samovar/react-mindmap.git">Source code</a>
+            </p>
+            <p>
+                <a href="https://youtube.com/c/Samovar101">More video</a>
+            </p>
         </>
     );
 }

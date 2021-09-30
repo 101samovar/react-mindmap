@@ -11,6 +11,6 @@
     background-color: white;
 }
 
-.expanded {
-    left: 0;
+.visible {
+    left: 0
 }
